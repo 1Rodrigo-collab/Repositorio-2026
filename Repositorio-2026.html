@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Depois das Eleições de 2026 — Guia Prático (E-book)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06121f;--bg2:#0c1f33;--card:#10283f;--ink:#f6f1e7;--mut:#a9b8c8;--gold:#e9a84c;--gold2:#f6c978;--red:#d6342c;--line:#25405c;--green:#46c08a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.12;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,6vw,3.9rem);font-weight:800}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:600}
+p{margin:0 0 1em}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.alt{background:var(--bg2)}
+.lead{color:var(--mut);max-width:62ch}
+
+/* timer */
+.bar{position:sticky;top:0;z-index:20;background:var(--red);color:#fff;padding:calc(8px + env(safe-area-inset-top,0px)) 14px 8px;text-align:center;font-weight:700;display:flex;gap:10px 16px;justify-content:center;align-items:center;flex-wrap:wrap;font-size:.95rem}
+.bar .t{font:800 1.35rem/1 Figtree,sans-serif;font-variant-numeric:tabular-nums;background:#fff;color:var(--red);padding:5px 10px;border-radius:6px;letter-spacing:.03em}
+
+/* buttons */
+.btn{display:inline-block;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#201303;font-weight:800;font-size:1.25rem;padding:18px 38px;border-radius:999px;text-decoration:none;box-shadow:0 0 0 0 rgba(233,168,76,.7);animation:pulse 1.8s infinite}
+.btn:hover{filter:brightness(1.07)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.btn.big{font-size:1.45rem;padding:22px 48px}
+@keyframes pulse{70%{box-shadow:0 0 0 18px rgba(233,168,76,0)}100%{box-shadow:0 0 0 0 rgba(233,168,76,0)}}
+@media (prefers-reduced-motion:reduce){.btn{animation:none}html{scroll-behavior:auto}}
+
+/* hero */
+.hero{padding:56px 0 72px;background:radial-gradient(900px 500px at 85% 20%,rgba(233,168,76,.22),transparent 60%),linear-gradient(180deg,#041019,var(--bg))}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.tag{display:inline-block;border:1px solid var(--gold);color:var(--gold2);padding:4px 12px;border-radius:999px;font-size:.85rem;margin-bottom:18px}
+.price-row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:22px 0 6px}
+.old{color:var(--mut);text-decoration:line-through;font-size:1.3rem}
+.new{font:800 3.2rem/1 Fraunces,serif;color:var(--gold2)}
+.off{background:var(--red);color:#fff;font-weight:800;padding:4px 10px;border-radius:6px;font-size:.9rem}
+.small{font-size:.9rem;color:var(--mut)}
+.cover{aspect-ratio:3/4;max-width:340px;margin:0 auto;border-radius:10px;padding:28px 24px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg,#06121f 0%,#0d3a52 55%,#e9a84c 130%);border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.55),14px 14px 0 rgba(233,168,76,.18);transform:rotate(2deg)}
+.cover b{color:var(--gold);font-size:.85rem}
+.cover strong{font:800 2rem/1.05 Fraunces,serif}
+.cover svg{width:100%;height:80px}
+.cover span{font-size:.8rem;color:#dbe6ef}
+
+/* grids */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:28px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+.box p{color:var(--mut);margin:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-top:30px}
+.stats div{text-align:center;border-top:3px solid var(--gold);background:var(--card);padding:16px 8px}
+.stats strong{display:block;font:800 2.2rem/1 Fraunces,serif;color:var(--gold2)}
+.stats span{font-size:.85rem;color:var(--mut)}
+ul.ck{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:12px}
+ul.ck li{padding-left:34px;position:relative}
+ul.ck li::before{content:"✓";position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--green);color:#04130c;font-weight:800;text-align:center;line-height:24px;font-size:.9rem}
+
+/* contents */
+.toc{columns:2;column-gap:36px;margin-top:24px}
+.toc p{break-inside:avoid;margin:0 0 .6em}
+.toc strong{color:var(--gold2)}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr}.toc{columns:1}.cover{max-width:260px}}
+
+/* offer */
+.offer{background:linear-gradient(160deg,#102a44,#08182a);border:2px solid var(--gold);border-radius:18px;padding:40px 28px;text-align:center;max-width:620px;margin:0 auto}
+.offer .new{font-size:4.2rem;display:block}
+.offer ul.ck{text-align:left;max-width:420px;margin:24px auto}
+
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700}
+details p{margin:12px 0 0;color:var(--mut)}
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--mut);font-size:.85rem}
+.notice{border-left:4px solid var(--gold);background:var(--card);padding:16px 20px;border-radius:0 10px 10px 0;margin-top:26px}
+</style>
+</head>
+<body>
+
+<div class="bar" role="timer" aria-live="off">
+  <span>🔥 Promoção acabando! Oferta termina em</span>
+  <span class="t" id="timer">15:00</span>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">E-book • Edição educativa • 59 páginas</span>
+      <h1>Depois das eleições de 2026: proteja sua renda e organize suas finanças em qualquer cenário.</h1>
+      <p class="lead">Um guia prático, apartidário e baseado em fontes oficiais para sair do improviso: entenda a economia, organize dívidas, monte sua reserva e siga um plano de 90 dias.</p>
+      <div class="price-row">
+        <span class="old">De R$ 68,90</span>
+        <span class="new">R$ 19,90</span>
+        <span class="off">-71%</span>
+      </div>
+      <p class="small">Pagamento único • Acesso imediato em PDF</p>
+      <p><a class="btn" href="#comprar" data-buy>Compre agora</a></p>
+    </div>
+    <div>
+      <div class="cover" aria-label="Capa do e-book">
+        <b>GUIA PRÁTICO • BRASIL 2026</b>
+        <strong>Depois das eleições de 2026</strong>
+        <svg viewBox="0 0 200 80" aria-hidden="true"><path d="M0 70h30v-12h30v-12h30v-12h30v-12h30v-12h50" fill="none" stroke="#e9a84c" stroke-width="5"/></svg>
+        <span>Proteja sua renda, organize as finanças e planeje o futuro — em qualquer cenário.</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>A eleição acaba em um dia. As contas continuam.</h2>
+    <p class="lead">Aluguel, comida, transporte, dívidas e trabalho seguem exigindo atenção, seja qual for o resultado das urnas. Este guia mostra o que fazer com o que está ao seu alcance.</p>
+    <div class="grid">
+      <div class="box"><h3>Você não sabe para onde vai o dinheiro</h3><p>Aprenda a fazer um diagnóstico simples, sem planilha complicada e sem culpa.</p></div>
+      <div class="box"><h3>As dívidas estão crescendo</h3><p>Entenda o CET, compare propostas e negocie sem aceitar parcela que não cabe.</p></div>
+      <div class="box"><h3>As notícias geram ansiedade</h3><p>Use um roteiro de verificação para separar fato, proposta e boato em 20 minutos por semana.</p></div>
+      <div class="box"><h3>A renda é apertada ou instável</h3><p>Orçamento realista para renda baixa ou variável, com base no seu pior mês.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>O que você vai encontrar dentro</h2>
+    <div class="stats">
+      <div><strong>17</strong><span>capítulos práticos</span></div>
+      <div><strong>9</strong><span>anexos e modelos</span></div>
+      <div><strong>90</strong><span>dias de plano de ação</span></div>
+      <div><strong>6</strong><span>cenários econômicos</span></div>
+    </div>
+    <div class="toc">
+      <p><strong>Parte I — Contexto e orçamento.</strong> O que muda (e o que não muda) após uma eleição, como a economia chega ao seu bolso, diagnóstico das finanças da casa e orçamento para renda apertada.</p>
+      <p><strong>Parte II — Dívidas, proteção e investimentos.</strong> Como negociar e quitar dívidas, reserva de emergência e como começar a investir sem cair em promessas.</p>
+      <p><strong>Parte III — Impostos, trabalho e renda.</strong> Reforma tributária, renda extra, carreira, planejamento para micro e pequenos negócios e benefícios públicos.</p>
+      <p><strong>Parte IV — Decisão e acompanhamento.</strong> Como acompanhar o governo sem desinformação, cenários econômicos, plano de 90 dias, erros comuns e perguntas frequentes.</p>
+    </div>
+    <h3 style="margin-top:34px">Anexos prontos para usar</h3>
+    <ul class="ck">
+      <li>Planilha de orçamento mensal (exemplo preenchido e versão em branco)</li>
+      <li>Checklist para organizar as finanças e checklist de segurança contra golpes</li>
+      <li>Calculadora de reserva de emergência e modelo de acompanhamento de dívidas</li>
+      <li>Plano de desenvolvimento profissional e plano pessoal de 12 meses</li>
+      <li>Glossário econômico em linguagem simples e diretório de fontes oficiais</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Para quem é este e-book</h2>
+    <div class="grid">
+      <div class="box"><h3>Trabalhadores assalariados</h3><p>Para fechar o mês, criar reserva e proteger o essencial.</p></div>
+      <div class="box"><h3>Pessoas endividadas</h3><p>Para conhecer o custo total, priorizar e negociar com critério.</p></div>
+      <div class="box"><h3>Autônomos e microempreendedores</h3><p>Fluxo de caixa, margem, ponto de equilíbrio e noções de MEI e Simples.</p></div>
+      <div class="box"><h3>Estudantes e quem busca emprego</h3><p>Currículo, qualificação pela vaga e rotina de procura.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Por que este guia é diferente</h2>
+    <ul class="ck">
+      <li><b>Apartidário.</b> Não defende nem ataca candidato, partido ou política.</li>
+      <li><b>Baseado em fontes oficiais.</b> TSE, IBGE, Banco Central, Receita Federal, Tesouro e outras, com 33 referências.</li>
+      <li><b>Honesto sobre o que não sabe.</b> Não faz previsões nem promete rendimento: ensina critérios que servem em mais de um cenário.</li>
+      <li><b>Feito para a vida real.</b> Funciona mesmo sem sobra de dinheiro, tempo livre ou formação em economia.</li>
+      <li><b>Ação em pouco tempo.</b> Tarefas de 20 a 40 minutos por semana, com tabela de execução.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="comprar">
+  <div class="wrap">
+    <div class="offer">
+      <span class="tag">Oferta por tempo limitado</span>
+      <h2>Guia Prático — Depois das Eleições de 2026</h2>
+      <span class="old">De R$ 68,90 por apenas</span>
+      <span class="new">R$ 19,90</span>
+      <p class="small">Economia de R$ 49,00 • Pagamento único</p>
+      <ul class="ck">
+        <li>E-book completo em PDF (59 páginas)</li>
+        <li>17 capítulos + 9 anexos e modelos</li>
+        <li>Plano de ação de 90 dias</li>
+        <li>Acesso imediato após a confirmação do pagamento</li>
+      </ul>
+      <p class="small">A promoção termina em <b id="timer2" style="color:var(--gold2)">15:00</b></p>
+      <a class="btn big" href="#comprar" data-buy>Compre agora</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>O e-book toma posição política?</summary><p>Não. É uma edição educativa e apartidária. O resultado eleitoral aparece apenas como fato verificado, e o restante do conteúdo trata de organização financeira.</p></details>
+    <details><summary>Ele promete que vou ganhar dinheiro ou investir melhor?</summary><p>Não. O material não garante rentabilidade, emprego nem benefício. Ele ensina método, critérios e verificação de fontes.</p></details>
+    <details><summary>Preciso ter dinheiro sobrando para aplicar o conteúdo?</summary><p>Não. O guia foi escrito para quem tem renda apertada ou variável, e inclui o que fazer quando a conta não fecha.</p></details>
+    <details><summary>Como recebo o e-book?</summary><p>Em formato PDF, com acesso imediato após a confirmação do pagamento, para ler no celular, tablet ou computador.</p></details>
+    <details><summary>O e-book substitui um consultor financeiro ou contador?</summary><p>Não. O conteúdo é educativo e informativo. Para decisões tributárias, jurídicas ou de investimento relevantes, procure um profissional habilitado.</p></details>
+    <p style="text-align:center;margin-top:36px"><a class="btn" href="#comprar" data-buy>Compre agora</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Material de caráter educativo e informativo. Não constitui consultoria financeira, recomendação de investimento, orientação tributária ou jurídica, nem previsão econômica. Nenhum resultado é garantido. Dados com referência em 25/10/2026; regras e valores podem mudar.</p>
+    <p>© 2026 Guia Prático — Edição Educativa.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var DURATION=15*60, left=DURATION;
+  var els=[document.getElementById('timer'),document.getElementById('timer2')];
+  function fmt(s){var m=Math.floor(s/60),r=s%60;return (m<10?'0':'')+m+':'+(r<10?'0':'')+r}
+  function tick(){
+    els.forEach(function(e){e.textContent=fmt(left)});
+    if(left<=0){els.forEach(function(e){e.textContent='00:00'});return}
+    left--; setTimeout(tick,1000);
+  }
+  tick();
+  // Troque pelo link real de pagamento (Hotmart, Kiwify, Stripe etc.)
+  var CHECKOUT_URL='https://pay.cakto.com.br/u9em8e7_1244354';
+  document.querySelectorAll('[data-buy]').forEach(function(a){a.setAttribute('href',CHECKOUT_URL)});
+})();
+</script>
+</body>
+</html>
